@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Brice OLIVIER">
+
+  <link rel="shortcut icon" href="">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="Brice OLIVIER">
+  <meta itemprop="image" content="./documents/profile_picture.jpg">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+  <!--
+-->
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:image" content="">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <center><a href=""><img id="avatar" src="./documents/profile_picture.jpg"></a></center>
+    <h1>Brice OLIVIER</h1>
+      <p>PhD student at the University of Grenoble Alpes, France</p>
+    <!--
+      <p>briceolivier1409@gmail.com</p>
+  -->
+      <p>brice.olivier@inria.fr</p>
+
+
+
+    <nav class="nav">
+      <ul class="list-bare">
+
+
+          <li><a class="nav__link" href="/../">Home Page</a></li>
+          <li><a class="nav__link" href="/../curriculum.html">Curriculum Vit&aelig;</a></li>
+          <li><a class="nav__link" href="/../publications-and-seminars.html">Publications & Seminars</a></li>
+          <li><a class="nav__link" href="/../softwares.html">Softwares</a></li>
+          <li><a class="nav__link" href="/../teaching.html">Teaching</a></li>
+
+      </ul>
+    </nav>
+
+    <p class="social">
+        <a href="https://www.linkedin.com/in/brice-olivier-47831272" target="_blank" ><img src="/theme/images/icons/linkedin.png"></a>
+        <a href="https://github.com/brice-olivier" target="_blank" ><img src="/theme/images/icons/github.png"></a>
+      <!--
+      -->
+      <!--
+    -->
+    </p>
+
+
+      <h2 class="blog_roll_link"><br/>BLOGROLLS</h2>
+      <ul class="navbar">
+        <li><a href="https://mistis.inrialpes.fr/">Inria, Mistis</a></li>
+      </ul>
+
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content" class="body">
+        
+        <p>Hi there !</p>
+<p>I am Brice Olivier. In October 2015, I started a PhD in applied mathematics at the University of Grenoble under the supervision of Jean-Baptiste Durand, Anne Guérin-Dugué and Marianne Clausel. My PhD is funded by the label of excellence <a href="https://persyval-lab.org/">PERSYVAL-lab</a> and is a result from the cooperation between three different laboratories : <a href="https://www.inria.fr/">Inria</a>, <a href="http://ljk.imag.fr/">Laboratoire Jean Kuntzmann</a>, <a href="http://www.gipsa-lab.fr/">GIPSA-lab</a>.</p>
+<p>This PhD thesis, which allies cognitive sciences and statistics, interests in jointly modeling and analyzing eye-movement and electroencephalogram (EEG) data which has been acquired from a set of subjects carrying out a press-review reading task. Therefore, it would be possible to characterize different states, or reading strategies, given eye-movement data in order to highlight different EEG patterns. The main challenge is to propose a statistical model which deals with a wide range of data types (discrete variables, continuous variables, multivariate time series, text) and which stays easily interpretable to better understand the way the human brain processes data.</p>
+<p>With a background in computer science, I gained a Master's-degree in ‘knowledge discovery in databases’ from the University of Lyon. It was there where I met some great individuals and teachers, who shared their passion for research and it became my encouragement to pursue this field. I try to impart the same amongst my first batch of students, whom I started teaching in September 2016.</p>
+<h1>detailed PhD description</h1>
+<h2>Scientific background</h2>
+<p>Recently, GIPSA-lab has developed computational models of information search in web-like materials, using data from both eye-tracking to get eye movements during the search and electroencephalograms (EEGs) to analyze the related neural activities. These joint datasets were obtained from experiments, in which subjects had to make some kinds of press reviews (Frey et al., 2013). In such information seeking tasks, reading process and decision making are closely related. Two kinds of decision are expected: A positive decision if the meaning of the text matches with the goal of information search, and a negative decision otherwise. Statistical analysis of such data aims at: deciphering underlying cognitive phases in the cognitive process, characterize these phases with eye movements and EEG properties, explain the phase changes by the local text properties and quantify the individual variability of the phase properties, as well as the variability due to different texts. Hidden Markov models (HMMs) have been used on eye movement series to infer phases in the reading process that can be interpreted as steps in the cognitive processes leading to decision – see for example Simola et al. (2008). In HMMs, each phase is associated with a state of the Markov chain. The states are observed indirectly through eye-movements.
+However, the characteristics of eye movements within each phase tend to be poorly discriminated. As a result, high uncertainty in the phase changes arises, and it can be difficult to relate phases to known patterns in EEGs. HMMs were also used for the analysis of EEGs (Obermaier et al., 2001) but coupling eye movements, EEGs and text properties in a coherent model is an unaddressed challenge.</p>
+<h2>Tasks</h2>
+<p>The aim of the PhD is to develop an integrated model coupling EEG and eye movements within one single HMM for better identification of the phases. Coupled HMMs are based on several dependent Markov chains such that at each time t, observations only depend on the states at time t (Zhong &amp; Ghosh, 2001). Here, the coupling should incorporate some delay between the transitions in both chains, since EEG patterns associated to cognitive processes may occur with some delay with respect to eye-movement phases. To better relate the human reading process to some intrinsic characteristics of the reviewed text, we propose an interpretation of our two experimental models based on a well-known hierarchical generative model, called LDA, used in the data mining context (Blei et al., 2003) and thereafter extending to the image setting (Fei-Fei &amp; Perona, 2005). We want to model “human data mining” for text or image as a variant of LDA, modifying in a convenient way the generative process and involving a random choice of the cognitive phase. The main goal is to take into account the fact that, in a text, a given word can be either read or not. The same question can also be raised in the image setting since a region of interest corresponding to a specific visual word can be explored or not. For this, a joint database with eye movements and EEG signals has been also recording during a visual search task according to a similar design as the information seeking task.</p>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <!--
+  <footer>
+    <p>
+    </p>
+  </footer>
+  -->
+
+</body>
+</html>
